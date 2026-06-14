@@ -2,9 +2,9 @@ import random
 
 def create_environment(biome_choice):
     # It lets the user choose the environment
-    choice = str(biome_choice)
+    choice = biome_choice
     # Numbers chosen to be a fair game
-    if choice == 1:
+    if choice == "1":
         return {
             "type": "savanna",
             "temperature": 0.8,
@@ -13,7 +13,7 @@ def create_environment(biome_choice):
             "toxin_level": 0
         }
         
-    elif choice == 2:
+    elif choice == "2":
         return {
             "type": "artic",
             "temperature": 0.85,
@@ -21,7 +21,7 @@ def create_environment(biome_choice):
             "predator_pressure": 0.30,
             "toxin_level": 0
         }
-    elif choice == 3:
+    elif choice == "3":
         return {
             "type": "toxic swamp",
             "temperature": 0.40,
@@ -30,7 +30,7 @@ def create_environment(biome_choice):
             "toxin_level": 0.85
         }
     
-    elif choice == 4:
+    elif choice == "4":
         return {
             "type": "deep forest",
             "temperature": 0.30,

@@ -13,10 +13,16 @@ def apply_gene_edit(population, trait, new_value):
     return population
 
 def apply_restricted_gene_edit(population, edits_left):
-    trait = input("Enter the trait to edit (speed, camouflage, heat_resistance, metabolism, reproduction_rate, toxin_resistance):")
+    trait = input("Enter the trait to edit (speed, camouflage, heat_resistance, metabolism, reproduction_rate, toxin_resistance): ")
 
     # Calculate the actual trait average
     all_values = [org["genome"][trait] for org in population if trait in org["genome"]]
+    
+    # In case no organisms are available.
+    if len(all_values) == 0:
+        print("No organisms available for genetic editing.")
+        return edits_left
+    
     average_value = sum(all_values)/len(all_values)
 
     # Define limits

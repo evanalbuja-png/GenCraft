@@ -143,7 +143,7 @@ def select_biome():
 
     while True:
         # In case user makes an invalid selection
-        choice = input("\nEnter the biome number (1–4):")
+        choice = str(input("\nEnter the biome number (1–4): "))
         if choice in ["1", "2", "3", "4"]:
             return choice
         print("Invalid selection. Please choose a number between 1 and 4.")
@@ -152,7 +152,7 @@ def main():
     while True:
         # Main function for program
         show_main_menu()
-        option = input("Select an option (1–2):")
+        option = input("Select an option (1–2): ")
 
         if option == "1":
             biome_choice = select_biome()
